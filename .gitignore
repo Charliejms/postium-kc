@@ -1,2 +1,7 @@
 node_modules
 out
+
+# Pycharm files
+.idea
+.idea/jsLibraryMappings.xml
+.idea/vcs.xml
