@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import {Component, Input, Output, EventEmitter} from "@angular/core";
 
 import { Post } from "../../models/post";
 
@@ -27,6 +27,11 @@ export class PostPreviewComponent {
      | clic se realiza en el template de este componente, necesitas, además, un manejador para el mismo.                |
      |------------------------------------------------------------------------------------------------------------------*/
 
+    @Output() postClik: EventEmitter<Post> = new EventEmitter();
+
+    onPostClick(){
+        this.postClik.emit(this.post)
+    }
     plainTextToHtml(text: string): string {
         return `<p>${text.replace(/\n/gi, "</p><p>")}</p>`;
     }

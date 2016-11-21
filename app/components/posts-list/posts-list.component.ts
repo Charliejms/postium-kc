@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 
 import { Post } from "../../models/post";
+import {Router} from "@angular/router";
 
 @Component({
     selector: "posts-list",
@@ -9,6 +10,10 @@ import { Post } from "../../models/post";
 export class PostsListComponent {
 
     @Input() posts: Post[];
+
+    constructor(
+        private _router:Router
+    ){}
 
     /*------------------------------------------------------------------------------------------------------------------|
      | ~~~ Red Path ~~~                                                                                                 |
@@ -26,4 +31,7 @@ export class PostsListComponent {
      | a navegar es '/posts', pasando como parámetro el identificador del post.                                        |
      |-----------------------------------------------------------------------------------------------------------------*/
 
+    navigationPost(post: Post){
+        this._router.navigate(["posts",post.id]);
+    }
 }
