@@ -12,6 +12,19 @@ export class PostsResolve implements Resolve<Post[]> {
 
     resolve(route: ActivatedRouteSnapshot): Observable<Post[]> {
 
+        let postList: Observable<Post[]> = new Observable();
+
+        switch (route.routeConfig.component.name){
+            case "UserPostsComponent":
+
+                postList = this._postService.getUserPosts(route.params['userId']);
+                break;
+
+            default:
+                postList = this._postService.getPosts();
+
+        }
+
         /*-----------------------------------------------------------------------------------------|
          | ~~~ Red Path ~~~                                                                        |
          |-----------------------------------------------------------------------------------------|
@@ -19,6 +32,7 @@ export class PostsResolve implements Resolve<Post[]> {
          | a un usuario, llame a la función 'getUserPosts()' del servicio PostService. Recuerda    |
          | mirar en los parámetros de la ruta, a ver qué encuentras.                               |
          |-----------------------------------------------------------------------------------------*/
+        // http://blog.thoughtram.io/angular/2016/10/10/resolving-route-data-in-angular-2.html
 
         /*-----------------------------------------------------------------------------------------|
          | ~~~ Yellow Path ~~~                                                                     |
@@ -28,6 +42,6 @@ export class PostsResolve implements Resolve<Post[]> {
          | Recuerda mirar en los parámetros de la ruta, a ver qué encuentras.                      |
          |-----------------------------------------------------------------------------------------*/
 
-        return this._postService.getPosts();
+        return postList;
     }
 }

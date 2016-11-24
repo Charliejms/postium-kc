@@ -18,4 +18,5 @@
 
 <post-preview *ngFor="let post of posts"
               [post]="post"
-              (postClik)="navigationPost($event)"></post-preview>
+              (postClik)="navigationPost($event)"
+              (authorClick)="nagationAuthorPost($event)"></post-preview>
