@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import {ActivatedRoute, Router} from "@angular/router";
 
 import { Post } from "../../models/post";
+import {Category} from "../../models/category";
 
 @Component({
     templateUrl: "./app/components/post-details/post-details.component.html",
@@ -41,5 +42,7 @@ export class PostDetailsComponent implements OnInit {
      | para hacer esto necesitas inyectar como dependencia el Router de la app. La ruta a navegar es '/posts/categories', |
      | pasando como parámetro el identificador de la categoría.                                                           |
      |--------------------------------------------------------------------------------------------------------------------*/
-
+    navigationCategoryClick(category: Category){
+        this._router.navigate(["posts/categories/", category.id])
+    }
 }

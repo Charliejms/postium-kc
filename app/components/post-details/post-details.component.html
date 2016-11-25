@@ -36,5 +36,5 @@
     | en él para notificar los clics sobre las categorías del post.            |
     |--------------------------------------------------------------------------|
     -->
-    <category-box [categories]="post.categories"></category-box>
+    <category-box [categories]="post.categories" (categoryClick)="navigationCategoryClick($event)"></category-box>
 </div>
