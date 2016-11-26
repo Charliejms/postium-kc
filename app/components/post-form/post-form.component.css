@@ -22,6 +22,28 @@ input[type="text"] {
     font-style: normal;
     letter-spacing: -.028em;
 }
+input.ng-touched.ng-invalid{
+    border-bottom: 1px solid red;
+
+}
+
+textarea.ng-touched.ng-valid {
+    border-bottom: 1px solid #02b875;
+}
+
+textarea.ng-touched.ng-invalid{
+    border-bottom: 1px solid red;
+
+}
+
+input.ng-touched.ng-valid {
+    border-bottom: 1px solid #02b875;
+}
+
+.mensaje-error {
+    color: red;
+    margin-bottom: 20px;
+}
 
 textarea {
     padding: 0;
@@ -83,4 +105,9 @@ input[type="datetime-local"] {
 ::-webkit-clear-button {
     opacity: 0;
     pointer-events: none;
+}
+
+button:disabled {
+    background-color: lightgray;
+    border: 1px solid gray;
 }

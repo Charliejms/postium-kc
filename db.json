@@ -251,6 +251,21 @@
       ],
       "likes": 4,
       "id": 10
+    },
+    {
+      "title": "Cómo ser más resiliente cuando las cosas se ponen difíciles",
+      "intro": "La resiliencia es la capacidad de lidiar con el estrés y la adversidad. Viene de creer en ti mismo y, al mismo tiempo, de creer en algo mucho más grande que tú.",
+      "body": "Es parte de la naturaleza humana resistirse al cambio, particularmente cuando se trata de una adversidad o de un reto. Pero el cambio es inevitable, y desarrollar habilidades de resiliencia nos ayudará no solamente a sobrevivir el cambio, también aprenderemos, creceremos y prosperaremos en él.\nLa resiliencia no es una habilidad con la que se nace; ésta implica comportamientos, pensamientos y acciones que pueden aprenderse y desarrollarse en cualquier persona.\nAquí tienes 10 formas de desarrollar tu resiliencia para que estés preparado cuando más la necesites.",
+      "publicationDate": 1480120307522,
+      "author": {
+        "id": 1,
+        "name": "KeepCoder",
+        "username": "keepcoder",
+        "email": "keepcoder@postium.com",
+        "avatar": "resources/images/keepcoder.jpg"
+      },
+      "likes": 0,
+      "id": 11
     }
   ],
   "categories": [

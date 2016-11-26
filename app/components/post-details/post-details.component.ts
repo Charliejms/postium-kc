@@ -32,7 +32,7 @@ export class PostDetailsComponent implements OnInit {
      | para hacer esto necesitas inyectar como dependencia el Router de la app. La ruta a navegar es '/posts/users', |
      | pasando como parámetro el identificador del autor.                                                            |
      |---------------------------------------------------------------------------------------------------------------*/
-    onAuthotClick(){
+    onAuthorClick(){
         this._router.navigate(['posts/users', this.post.author.id]);
     }
     /*--------------------------------------------------------------------------------------------------------------------|
